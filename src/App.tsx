@@ -9,7 +9,7 @@ function App() {
       <>
         <GlobalStyles />
         <div>
-          <small>Icon made by Freepik from www.flaticon.com</small>
+          <small>Laughing goat ghana</small>
         </div>
       </>
     </ThemeProvider>
