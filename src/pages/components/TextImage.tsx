@@ -43,11 +43,17 @@ const ButtonWrapper = styled.div`
 `;
 
 const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;
+
+const ImageWrapper = styled.div`
+  overflow: hidden;
+  width: 50%;
+  border-radius: 8px;
   display: flex;
   flex: 1;
-  width: 50%;
-  overflow: hidden;
-  border-radius: 8px;
 `;
 
 interface Props {
@@ -65,7 +71,7 @@ function TextImage({ right, image, text, top, href, grey, icon, buttonText }: Pr
   const texts = text.map( t => <Text>{ t }</Text>);
   return(
     <Wrapper right={ right } top={ top }>
-      <Image src={ image } />
+      <ImageWrapper><Image src={ image } /></ImageWrapper>
       <TextWrapper grey={ grey }>
         <FontAwesomeIcon icon={ icon } size="2x" />
         <TextContainer>

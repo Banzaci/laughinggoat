@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div<{ top?: boolean; }>`
   display: flex;
-  margin: ${props => props.top ? '100px 0 20px 0' : '60px 0'};
+  margin: ${props => props.top ? '60px 0 20px 0' : '60px 0'};
   justify-content: center;
 `;
 

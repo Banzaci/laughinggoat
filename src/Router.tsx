@@ -14,17 +14,23 @@ const Navigation = styled.nav`
   position:  absolute;
   display: flex;
   width: 100%;
-  top: 24px;
+  top: 8px;
 `;
 
-const WrapperDesktop = styled.ul`
+const ItemWrapperDesktop = styled.ul`
+  display: flex;
+`;
+
+const WrapperDesktop = styled.div`
   display: none;
   @media only screen and (min-width : 920px) {
     display: flex;
     height: 200px;
-    align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: 12x;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -73,15 +79,14 @@ const Main = styled.main`
 `;
 
 const Item = styled.li`
-  padding: 0 24px;
   line-height: 24px;
+  font-weight: 400;
   a {
     color: #FFF;
     text-decoration: none;
+    padding: 8px 24px;
     &: hover {
-      color: #FFF;
-      border-bottom: 4px solid rgba(255, 255, 255, 1);
-      padding-bottom: 1px;
+      background-color: rgba(255, 180, 0, .9);
     }
   }
 `;
@@ -140,22 +145,22 @@ function Router() {
           <WrapperMobileContainer isOpen={ isOpen }>
             <WrapperMobileNavigation>
               <ItemMobile>
-                <Link to="/" onClick={ onToggleMenu }>Home</Link>
+                <Link to="/" onClick={ onToggleMenu }>HOME</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/rooms" onClick={ onToggleMenu }>Rooms</Link>
+                <Link to="/rooms" onClick={ onToggleMenu }>ROOMS</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/busua-beach" onClick={ onToggleMenu }>Busua Beach</Link>
+                <Link to="/busua-beach" onClick={ onToggleMenu }>BUSUA BEACH</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/restaurant" onClick={ onToggleMenu }>Restaurant</Link>
+                <Link to="/restaurant" onClick={ onToggleMenu }>RESTAURANT</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/booking" onClick={ onToggleMenu }>Booking</Link>
+                <Link to="/booking" onClick={ onToggleMenu }>BOOKING</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/contact" onClick={ onToggleMenu }>Contact</Link>
+                <Link to="/contact" onClick={ onToggleMenu }>CONTACT</Link>
               </ItemMobile>
             </WrapperMobileNavigation>
           </WrapperMobileContainer>
@@ -172,32 +177,38 @@ function Router() {
           />
         </WrapperMobile>
         <WrapperDesktop>
-          <Item>
-            <Link to="/">Home</Link>
-          </Item>
-          <Item>
-            <Link to="/rooms">Rooms</Link>
-          </Item>
-          <Item>
-            <Link to="/busua-beach">Busua Beach</Link>
-          </Item>
-          <Item>
-            <Link to="/">
-              <LoggaWrapper><Logga /></LoggaWrapper>
-            </Link>
-          </Item>
-          <Item>
-            <Link to="/restaurant">Restaurant</Link>
-          </Item>
-          <Item>
-            <Link to="/booking">Booking</Link>
-          </Item>
-          <Item>
-            <Link to="/contact">Contact</Link>
-          </Item>
+          <LoggaWrapper><Logga /></LoggaWrapper>
+          <ItemWrapperDesktop>
+            <Item>
+              <Link to="/">HOME</Link>
+            </Item>
+            <Item>
+              <Link to="/rooms">ROOMS</Link>
+            </Item>
+            <Item>
+              <Link to="/busua-beach">BUSUA BEACH</Link>
+            </Item>
+            <Item>
+              <Link to="/restaurant">RESTAURANT</Link>
+            </Item>
+            <Item>
+              <Link to="/booking">BOOKINGS</Link>
+            </Item>
+            <Item>
+              <Link to="/contact">CONTACT</Link>
+            </Item>
+          </ItemWrapperDesktop>
         </WrapperDesktop>
       </Navigation>
     </BrowserRouter>
   );
 }
 export default Router;
+
+/*
+<Item>
+            <Link to="/">
+              <LoggaWrapper><Logga /></LoggaWrapper>
+            </Link>
+          </Item>
+          */

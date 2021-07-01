@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { ButtonWhite } from './Button';
-import House from '../../imgs/house.jpg';
+import { ButtonWhiteNoCorners } from './Button';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -10,17 +9,7 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  top: 490px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ParagraphWrapper = styled.div`
-  position: absolute;
-  top: 280px;
+  top: 560px;
   left: 0;
   width: 100%;
   display: flex;
@@ -34,18 +23,8 @@ const Img = styled.img<{ src: any; }>`
   object-fit: cover;
 `;
 
-const Paragraph = styled.p`
-  margin: 0;
-  padding: 0;
-  line-height: 38px;
-  text-align: center;
-  color: white;
-  font-size: 24px;
-  max-width: 600px;
-`;
-
 interface Props {
-  src: unknown;
+  src: string;
   text?: string;
   href?: string;
 }
@@ -55,18 +34,15 @@ function Hero({ src, href, text }: Props) {
 
   useEffect(() => {
       const img = new Image()
-      img.src = House
-      img.onload = () => setSource(House)
+      img.src = src;
+      img.onload = () => setSource(src);
   }, [src])
 
   return(
     <Wrapper>
       <Img src={ source } />
-      { text && <ParagraphWrapper><Paragraph>
-          { text }
-        </Paragraph></ParagraphWrapper>}
       { href && <ButtonWrapper>
-          <ButtonWhite href={ href } large>Read more</ButtonWhite>
+          <ButtonWhiteNoCorners href={ href } large>BOOK YOUR SURF EXPERIENCE</ButtonWhiteNoCorners>
         </ButtonWrapper>}
     </Wrapper>
   )
