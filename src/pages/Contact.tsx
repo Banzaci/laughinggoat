@@ -1,10 +1,11 @@
 import React from 'react';
+import { Main } from './components/Components';
 
 function Contact() {
   return (
-    <div>
+    <Main>
         Contact
-    </div>
+    </Main>
   );
 }
 export default Contact;

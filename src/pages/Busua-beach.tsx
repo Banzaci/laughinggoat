@@ -1,10 +1,11 @@
 import React from 'react';
+import { Main } from './components/Components';
 
 function BusuaBeach() {
   return (
-    <div>
+    <Main>
         Busua Beach
-    </div>
+    </Main>
   );
 }
 export default BusuaBeach;

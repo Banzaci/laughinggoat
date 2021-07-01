@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import HamburgerMenu from 'react-hamburger-menu';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
@@ -10,17 +11,59 @@ import Restaurang from './pages/Restaurang';
 import { ReactComponent as Logo } from './LOGO_white.svg';
 
 const Navigation = styled.nav`
-  position:  fixed;
+  position:  absolute;
   display: flex;
   width: 100%;
 `;
 
-const Wrapper = styled.ul`
-  display: flex;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+const WrapperDesktop = styled.ul`
+  display: none;
+  @media only screen and (min-width : 920px) {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+`;
+
+const WrapperMobile = styled.div`
+  margin: 12px;
+  @media only screen and (min-width : 920px) {
+    display: none;
+  }
+`;
+
+const WrapperMobileContainer = styled.div<{ isOpen: boolean }>`
+  position: absolute;
+  top: 0;
+  left: ${props => props.isOpen ? 0 : -500 }px;
+  background-color: black;
+  width: 98%;
+  max-width: 498px;
+  transition: all .4s;
+  padding: 12px;
+  @media only screen and (min-width : 920px) {
+    display: none;
+  }
+`;
+
+const WrapperMobileNavigation =  styled.ul`
+  margin: 40px;
+`;
+
+const ItemMobile = styled.li`
+  padding: 8px 24px;
+  a {
+    color: #DDD;
+    text-decoration: none;
+    &: hover {
+      color: #FFF;
+      border-bottom: 4px solid rgba(255, 255, 255, .5);
+      padding-bottom: 1px;
+
+    }
+  }
 `;
 
 const Main = styled.main`
@@ -62,6 +105,9 @@ const LoggaWrapper = styled.div`
 `;
 
 function Router() {
+  const [ isOpen, setIsOpen ] = useState(false);
+  const onToggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <BrowserRouter>
       <Main>
@@ -90,7 +136,42 @@ function Router() {
         </Switch>
       </Main>
       <Navigation>
-        <Wrapper>
+        <WrapperMobile>
+          <WrapperMobileContainer isOpen={ isOpen }>
+            <WrapperMobileNavigation>
+              <ItemMobile>
+                <Link to="/" onClick={ onToggleMenu }>Home</Link>
+              </ItemMobile>
+              <ItemMobile>
+                <Link to="/rooms" onClick={ onToggleMenu }>Rooms</Link>
+              </ItemMobile>
+              <ItemMobile>
+                <Link to="/busua-beach" onClick={ onToggleMenu }>Busua Beach</Link>
+              </ItemMobile>
+              <ItemMobile>
+                <Link to="/restaurant" onClick={ onToggleMenu }>Restaurant</Link>
+              </ItemMobile>
+              <ItemMobile>
+                <Link to="/booking" onClick={ onToggleMenu }>Booking</Link>
+              </ItemMobile>
+              <ItemMobile>
+                <Link to="/contact" onClick={ onToggleMenu }>Contact</Link>
+              </ItemMobile>
+            </WrapperMobileNavigation>
+          </WrapperMobileContainer>
+          <HamburgerMenu
+            isOpen={isOpen}
+            menuClicked={onToggleMenu}
+            width={40}
+            height={40}
+            strokeWidth={2}
+            rotate={0}
+            color='white'
+            borderRadius={0}
+            animationDuration={0.5}
+          />
+        </WrapperMobile>
+        <WrapperDesktop>
           <Item>
             <Link to="/">Home</Link>
           </Item>
@@ -114,7 +195,7 @@ function Router() {
           <Item>
             <Link to="/contact">Contact</Link>
           </Item>
-        </Wrapper>
+        </WrapperDesktop>
       </Navigation>
     </BrowserRouter>
   );

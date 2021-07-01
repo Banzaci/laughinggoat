@@ -1,10 +1,11 @@
 import React from 'react';
-import Hero from './components/Hero';
+import { Main } from './components/Components';
 
 function Book() {
   return (
-    <div>
-    </div>
+    <Main>
+      Booking
+    </Main>
   );
 }
 export default Book;

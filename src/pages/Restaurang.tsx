@@ -1,10 +1,11 @@
 import React from 'react';
+import { Main } from './components/Components';
 
 function Restaurang() {
   return (
-    <div>
+    <Main>
         Restaurang
-    </div>
+    </Main>
   );
 }
 export default Restaurang;
