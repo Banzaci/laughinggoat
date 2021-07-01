@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  top: 470px;
+  top: 490px;
   left: 0;
   width: 100%;
   display: flex;
@@ -37,7 +37,7 @@ const Img = styled.img<{ src: any; }>`
 const Paragraph = styled.p`
   margin: 0;
   padding: 0;
-  line-height: 48px;
+  line-height: 38px;
   text-align: center;
   color: white;
   font-size: 24px;

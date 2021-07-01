@@ -14,6 +14,7 @@ const Navigation = styled.nav`
   position:  absolute;
   display: flex;
   width: 100%;
+  top: 24px;
 `;
 
 const WrapperDesktop = styled.ul`
@@ -55,7 +56,7 @@ const WrapperMobileNavigation =  styled.ul`
 const ItemMobile = styled.li`
   padding: 8px 24px;
   a {
-    color: #DDD;
+    color: #FFF;
     text-decoration: none;
     &: hover {
       color: #FFF;
@@ -75,13 +76,12 @@ const Item = styled.li`
   padding: 0 24px;
   line-height: 24px;
   a {
-    color: #DDD;
+    color: #FFF;
     text-decoration: none;
     &: hover {
       color: #FFF;
-      border-bottom: 4px solid rgba(255, 255, 255, .5);
+      border-bottom: 4px solid rgba(255, 255, 255, 1);
       padding-bottom: 1px;
-
     }
   }
 `;

@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: any }>`
     margin: 0;
     padding: 0;
     width: 100%;
+
   }
   *, *::after, *::before {
     box-sizing: border-box;
@@ -13,7 +14,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: any }>`
     background: white;
     color: black;
     display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family:'Roboto',sans-serif;
     height: 100vh;
     justify-content: center;
     text-rendering: optimizeLegibility;

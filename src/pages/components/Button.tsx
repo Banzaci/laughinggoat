@@ -3,12 +3,11 @@ import styled from 'styled-components';
 const Button = styled.a<{ large?: boolean; }>`
   cursor: pointer;
   display:inline-block;
-  padding:${ props => props.large ? '24px 88px' : '12px 44px'};
+  padding:${ props => props.large ? '24px 88px' : '16px 44px'};
   margin: 0;
-  border-radius:0.12em;
+  border-radius:8px;
   box-sizing: border-box;
   text-decoration:none;
-  font-family:'Roboto',sans-serif;
   font-weight:300;
   text-align:center;
   transition: all 0.2s;
@@ -19,16 +18,16 @@ export const ButtonBlack = styled(Button)`
   color:#000;
   &:hover {
     color:#999;
-      border-color:#999;
+    border-color:#999;
   }
 `;
 
 export const ButtonGrey = styled(Button)`
-  border:0.1em solid #999;
-  color:#999;
+  border:1px solid #666;
+  color:#666;
   &:hover {
-    color:#333;
-    border-color:#333;
+    color:#CCC;
+    border-color:#CCC;
   }
 `;
 
@@ -37,6 +36,6 @@ export const ButtonWhite = styled(Button)`
   color:#FFF;
   &:hover {
     color:#DDD;
-      border-color:#DDD;
+    border-color:#DDD;
   }
 `;
