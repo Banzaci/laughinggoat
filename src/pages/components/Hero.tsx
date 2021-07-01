@@ -42,8 +42,8 @@ function Hero({ src, href }: Props) {
     <Wrapper>
       <Img src={ source } />
       { href && <ButtonWrapper>
-            <ButtonWhite href={ href } large>Read more</ButtonWhite>
-          </ButtonWrapper>}
+          <ButtonWhite href={ href } large>Read more</ButtonWhite>
+        </ButtonWrapper>}
     </Wrapper>
   )
 }

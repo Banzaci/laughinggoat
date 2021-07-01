@@ -10,7 +10,7 @@ const text1 = 'Welcome to';
 function Home() {
   return (
     <Main>
-       <Hero src={ House } href="restaurant" />
+       <Hero src={ House } href="restaurant" text={ text1 }/>
        <Wrapper top={ 600 }>
           <Content>
             <Text top text={ text1 }/>
