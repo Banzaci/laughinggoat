@@ -36,8 +36,9 @@ export const ButtonWhite = styled(Button)`
   border: 1px solid #FFF;
   color: #FFF;
   &:hover {
-    color:#ccc;
-    border-color:#ccc;
+    background-color: rgba(255, 180, 0, .9);
+    border:1px solid rgba(255, 180, 0, .9);
+    transform: scale(1.1);
   }
 `;
 

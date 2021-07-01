@@ -28,7 +28,7 @@ const WrapperDesktop = styled.div`
     height: 200px;
     justify-content: center;
     width: 100%;
-    margin-top: 12x;
+    margin-top: 24px;
     flex-direction: column;
     align-items: center;
   }
@@ -66,9 +66,6 @@ const ItemMobile = styled.li`
     text-decoration: none;
     &: hover {
       color: #FFF;
-      border-bottom: 4px solid rgba(255, 255, 255, .5);
-      padding-bottom: 1px;
-
     }
   }
 `;
@@ -84,7 +81,7 @@ const Item = styled.li`
   a {
     color: #FFF;
     text-decoration: none;
-    padding: 8px 24px;
+    padding: 12px 24px 8px;
     &: hover {
       background-color: rgba(255, 180, 0, .9);
     }
@@ -93,12 +90,8 @@ const Item = styled.li`
 
 const Logga = styled(Logo)`
   transition: all .2s ease;
-  width: 80%;
-  height: 80%;
-  &:hover {
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
 `;
 
 const LoggaWrapper = styled.div`

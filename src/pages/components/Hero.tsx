@@ -9,18 +9,27 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  top: 560px;
+  top: 370px;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `;
 
 const Img = styled.img<{ src: any; }>`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+const Text = styled.p`
+  text-align: center; 
+  color: white;
+  max-width: 450px;
+  line-height: 24px;
+  font-size: 18px;
+  margin-top: 32px;
 `;
 
 interface Props {
@@ -43,7 +52,9 @@ function Hero({ src, href, text }: Props) {
       <Img src={ source } />
       { href && <ButtonWrapper>
           <ButtonWhiteNoCorners href={ href } large>BOOK YOUR SURF EXPERIENCE</ButtonWhiteNoCorners>
-        </ButtonWrapper>}
+          <Text>{ text }</Text>
+        </ButtonWrapper>
+      }
     </Wrapper>
   )
 }
