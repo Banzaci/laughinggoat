@@ -23,6 +23,15 @@ export const ButtonBlack = styled(Button)`
   }
 `;
 
+export const ButtonGrey = styled(Button)`
+  border:0.1em solid #999;
+  color:#999;
+  &:hover {
+    color:#333;
+    border-color:#333;
+  }
+`;
+
 export const ButtonWhite = styled(Button)`
   border:0.1em solid #FFF;
   color:#FFF;

@@ -7,13 +7,17 @@ const Wrapper = styled.div<{ top?: boolean; }>`
   justify-content: center;
 `;
 
-const Paragraph = styled.div`
+const Paragraph = styled.p`
   position: relative;
   display: flex;
   flex: 1;
   padding: 12px;
   color: #333;
   max-width: 500px;
+  margin: 0;
+  padding: 0;
+  line-height: 28px;
+  text-align: center;
 `;
 
 interface Props {
