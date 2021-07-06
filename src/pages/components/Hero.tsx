@@ -7,7 +7,7 @@ const Wrapper = styled.div<{ fullHeight?: boolean; }>`
   height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 20px)'};
   background-color: black;
   @media only screen and (min-width : 920px) {
-    height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 440px)'}; 
+    height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 480px)'}; 
   }
 `;
 

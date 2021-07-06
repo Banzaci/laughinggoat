@@ -74,6 +74,7 @@ const Item = styled.li`
     text-decoration: none;
     padding: 12px 24px 8px;
     transition: all 0.2s;
+    font-size: 16px;
     &:hover {
       background-color: rgba(255, 180, 0, .9);
     }
@@ -92,8 +93,8 @@ const LoggaWrapper = styled.div`
   height: 80px;
   align-items: flex-end;
   @media only screen and (min-width : 920px) {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     align-items: center;
     justify-content: center;
   }
@@ -168,11 +169,3 @@ function Router() {
   );
 }
 export default Router;
-
-/*
-<Item>
-            <Link to="/">
-              <LoggaWrapper><Logga /></LoggaWrapper>
-            </Link>
-          </Item>
-          */

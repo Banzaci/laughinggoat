@@ -9,10 +9,10 @@ const Wrapper = styled.div<{ top?: boolean; smallMargin?: boolean;  left?: boole
   width: 600px;
 `;
 
-const Paragraph = styled.p<{ italic?: boolean; left?: boolean;}>`
+const Paragraph = styled.p<{ italic?: boolean; left?: boolean; white?: boolean;}>`
   position: relative;
   padding: 12px;
-  color: #555;
+  color: ${props => props.white ? 'white' : '#555' };
   max-width: 600px;
   margin: 0;
   padding: 0;
@@ -39,14 +39,15 @@ interface Props {
   smallMargin?: boolean;
   italic?: boolean;
   left?: boolean;
+  white?: boolean;
 }
 
-function Text({ text, top, italic, href, smallMargin, left }: Props) {
+function Text({ text, top, italic, href, smallMargin, left, white }: Props) {
   return(
       <Wrapper top={ top } smallMargin={ smallMargin } left={ left }>
-        { href ? <Href href={ href } rel="noreferrer" target="_blank"><Paragraph left={ left } italic={ italic }>
+        { href ? <Href href={ href } rel="noreferrer" target="_blank"><Paragraph white={ white } left={ left } italic={ italic }>
           { text }
-        </Paragraph></Href> : <Paragraph italic={ italic } left={ left } dangerouslySetInnerHTML={{__html: text}} />}
+        </Paragraph></Href> : <Paragraph white={ white } italic={ italic } left={ left } dangerouslySetInnerHTML={{__html: text}} />}
       </Wrapper>
   )
 }

@@ -7,7 +7,7 @@ import Room1 from '../imgs/room1.JPG';
 import Yard from '../imgs/yeard.jpg';
 import { roomIngress } from './Rooms';
 import { restaurantIngress } from './Restaurang';
-import { beachIngress } from './Busua-beach';
+import { beachIngress } from './BusuaBeach';
 import { faBed, faUtensils, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
 
 

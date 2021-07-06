@@ -61,15 +61,17 @@ export interface TextImages {
   ingress: string,
   capacity: string,
   price: number,
+  rooms?: boolean;
 }
 
 interface Props {
   textImages: TextImages[];
+  rooms?: boolean;
 }
 
 const calculateWeeklyPrice = (price: number) => Math.round(price * .82) * 7;
 
-const TextImageBlock = ({ image, ingress, capacity, price }: TextImages, index:number) => {
+const TextImageBlock = ({ image, ingress, capacity, price, rooms }: TextImages, index:number) => {
   return (
     <TextImageConatiner key={ index }>
       <ImageWrapper>
@@ -77,14 +79,14 @@ const TextImageBlock = ({ image, ingress, capacity, price }: TextImages, index:n
       </ImageWrapper>
       <Text>Max capacity: { capacity }.</Text>
       <Ingress>{ ingress }</Ingress>
-      <Price>Price per night: ${ price } including breakfast.</Price>
-      <WeeklyPrice>Price for 7 nights: ${ calculateWeeklyPrice(price)} including breakfast.</WeeklyPrice>
+      { rooms && <Price>Price per night: ${ price } including breakfast.</Price>}
+      { rooms && <WeeklyPrice>Price for 7 nights: ${ calculateWeeklyPrice(price)} including breakfast.</WeeklyPrice>}
     </TextImageConatiner>
   );
 }
 
-function ThreeImages({ textImages }: Props) {
-  const imagesWithText = textImages.map(TextImageBlock);
+function ThreeImages({ textImages, rooms }: Props) {
+  const imagesWithText = textImages.map(textImage => <TextImageBlock {...textImage} rooms={ rooms }/>);
   return(
     <Wrapper>
       { imagesWithText }

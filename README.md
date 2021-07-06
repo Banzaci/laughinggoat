@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+
+#Font https://fontawesome.com/v5.15/icons?d=gallery&p=2 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

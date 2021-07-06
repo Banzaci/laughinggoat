@@ -7,6 +7,10 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
+import Restaurang from './pages/Restaurang';
+import BusuaBeach from './pages/BusuaBeach';
+import Contact from './pages/Contact';
+
 import SurfCamp from './pages/SurfCamp';
 
 const Wrapper = styled.div`
@@ -30,10 +34,9 @@ function App() {
             <Main>
               <Route exact path="/" component={ Home } />
               <Route path="/rooms" component={ Rooms } />
-              <Route path="/busua-beach" component={ Home } />
-              <Route path="/restaurant" component={ Home } />
-              <Route path="/booking" component={ Home } />
-              <Route path="/contact" component={ Home } />
+              <Route path="/busua-beach" component={ BusuaBeach } />
+              <Route path="/restaurant" component={ Restaurang } />
+              <Route path="/contact" component={ Contact } />
               <Route path="/surf-camp" component={ SurfCamp } />
             </Main>
             <Header/>
