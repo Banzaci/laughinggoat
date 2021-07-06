@@ -2,43 +2,58 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ButtonWhiteNoCorners } from './Button';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ fullHeight?: boolean; }>`
   width: 100%;
-  height: 100%;
+  height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 20px)'};
+  background-color: black;
+  @media only screen and (min-width : 920px) {
+    height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 440px)'}; 
+  }
 `;
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  top: 370px;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  top: 100px;
+  @media only screen and (min-width : 920px) {
+    top: 320px;
+    left: 0;
+    width: 100%;  
+  }
 `;
 
 const Img = styled.img<{ src: any; }>`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all smooth .6;
+  opacity: .6;
 `;
 const Text = styled.p`
   text-align: center; 
   color: white;
-  max-width: 450px;
+  max-width: 90%;
+  margin: 0;
   line-height: 24px;
   font-size: 18px;
   margin-top: 32px;
+  @media only screen and (min-width : 920px) {
+    max-width: 550px; 
+  }
 `;
 
 interface Props {
   src: string;
-  text?: string;
+  texts?: string[];
   href?: string;
+  buttonText?: string;
+  fullHeight?: boolean; 
 }
 
-function Hero({ src, href, text }: Props) {
+function Hero({ src, href, texts, buttonText, fullHeight }: Props) {
   const [ source, setSource ] = useState('')
 
   useEffect(() => {
@@ -46,15 +61,14 @@ function Hero({ src, href, text }: Props) {
       img.src = src;
       img.onload = () => setSource(src);
   }, [src])
-
+  const text = texts?.map( t => <Text>{ t }</Text>);
   return(
-    <Wrapper>
+    <Wrapper fullHeight={ fullHeight }>
       <Img src={ source } />
-      { href && <ButtonWrapper>
-          <ButtonWhiteNoCorners href={ href } large>BOOK YOUR SURF EXPERIENCE</ButtonWhiteNoCorners>
-          <Text>{ text }</Text>
+      <ButtonWrapper>
+      { href && <ButtonWhiteNoCorners href={ href } large margin='12px 0 44px 0'>{ buttonText }</ButtonWhiteNoCorners> }
+        { text }
         </ButtonWrapper>
-      }
     </Wrapper>
   )
 }

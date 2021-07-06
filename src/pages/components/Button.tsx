@@ -42,6 +42,7 @@ export const ButtonWhite = styled(Button)`
   }
 `;
 
-export const ButtonWhiteNoCorners = styled(ButtonWhite)`
+export const ButtonWhiteNoCorners = styled(ButtonWhite)<{ margin?: string; }>`
   border-radius:0;
+  margin: ${props => props.margin ? props.margin : '0' }
 `;

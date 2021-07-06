@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 `;
 
-export const Wrapper = styled.div<{ top: number }>`
+export const Wrapper = styled.div`
   background-color: white;
-  position: absolute;
-  top: ${props => props.top ?? 0}px;
-  left: 0;
   width: 100%;
   height: 100%;
 `;

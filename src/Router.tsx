@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Rooms from './pages/Rooms';
-import Book from './pages/Book';
-import Contact from './pages/Contact';
-import BusuaBeach from './pages/Busua-beach';
-import Restaurang from './pages/Restaurang';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './LOGO_white.svg';
 
 const Navigation = styled.nav`
   position:  absolute;
   display: flex;
   width: 100%;
-  top: 8px;
+  @media only screen and (min-width : 920px) {
+    top: 8px;
+  }
 `;
 
 const ItemWrapperDesktop = styled.ul`
@@ -46,7 +42,7 @@ const WrapperMobileContainer = styled.div<{ isOpen: boolean }>`
   top: 0;
   left: ${props => props.isOpen ? 0 : -500 }px;
   background-color: black;
-  width: 98%;
+  width: 100%;
   max-width: 498px;
   transition: all .4s;
   padding: 12px;
@@ -60,7 +56,7 @@ const WrapperMobileNavigation =  styled.ul`
 `;
 
 const ItemMobile = styled.li`
-  padding: 8px 24px;
+  padding: 12px 24px;
   a {
     color: #FFF;
     text-decoration: none;
@@ -68,11 +64,6 @@ const ItemMobile = styled.li`
       color: #FFF;
     }
   }
-`;
-
-const Main = styled.main`
-  display: flex;
-  background-color: white;
 `;
 
 const Item = styled.li`
@@ -96,10 +87,15 @@ const Logga = styled(Logo)`
 
 const LoggaWrapper = styled.div`
   display: flex;
-  width: 200px;
+  width: 80px;
+  height: 80px;
+  align-items: flex-end;
+  @media only screen and (min-width : 920px) {
+    width: 200px;
   height: 200px;
   align-items: center;
   justify-content: center;
+  }
 `;
 
 function Router() {
@@ -108,34 +104,10 @@ function Router() {
 
   return (
     <BrowserRouter>
-      <Main>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/rooms">
-            <Rooms />
-          </Route>
-          <Route path="/rooms">
-            <Rooms />
-          </Route>
-          <Route path="/busua-beach">
-            <BusuaBeach />
-          </Route>
-          <Route path="/restaurant">
-            <Restaurang />
-          </Route>
-          <Route path="/booking">
-            <Book />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-      </Main>
       <Navigation>
         <WrapperMobile>
           <WrapperMobileContainer isOpen={ isOpen }>
+          <LoggaWrapper><Logga /></LoggaWrapper>
             <WrapperMobileNavigation>
               <ItemMobile>
                 <Link to="/" onClick={ onToggleMenu }>HOME</Link>
