@@ -27,8 +27,8 @@ function Rooms() {
           <Content>
             <FontWrapper><FontAwesomeIcon icon={ faBed } size="3x" color="#666" /></FontWrapper>
             <Text smallMargin left text={ reviewText2 }/>
-            <ThreeImages textImages={ roomsRow1 } />
-            <ThreeImages textImages={ roomsRow2 } />
+            <ThreeImages textImages={ roomsRow1 } surfcamp />
+            <ThreeImages textImages={ roomsRow2 } surfcamp />
           </Content>
        </Wrapper>
     </Main>

@@ -61,17 +61,23 @@ export interface TextImages {
   ingress: string,
   capacity: string,
   price: number,
+  priceSurfcampWeek: number,
+  priceSurfcampWeekend: number,
   rooms?: boolean;
+  surfcamp?: boolean;
 }
 
 interface Props {
   textImages: TextImages[];
   rooms?: boolean;
+  surfcamp?: boolean;
 }
 
-const calculateWeeklyPrice = (price: number) => Math.round(price * .82) * 7;
+const calculatePriceWithDiscount = (price: number, no:number) => Math.round(price * .82) * no;
 
-const TextImageBlock = ({ image, ingress, capacity, price, rooms }: TextImages, index:number) => {
+const calculatePriceWithSurfcamp = (price: number, priceSurfcampWeek: number, no:number) => calculatePriceWithDiscount(price, no) + priceSurfcampWeek;
+
+const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, priceSurfcampWeek, priceSurfcampWeekend }: TextImages, index:number) => {
   return (
     <TextImageConatiner key={ index }>
       <ImageWrapper>
@@ -79,14 +85,16 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms }: TextImages, 
       </ImageWrapper>
       <Text>Max capacity: { capacity }.</Text>
       <Ingress>{ ingress }</Ingress>
-      { rooms && <Price>Price per night: ${ price } including breakfast.</Price>}
-      { rooms && <WeeklyPrice>Price for 7 nights: ${ calculateWeeklyPrice(price)} including breakfast.</WeeklyPrice>}
+      { rooms && <Price>Price per night: { price } including breakfast.</Price>}
+      { rooms && <WeeklyPrice>Price for 7 nights: { calculatePriceWithDiscount(price, 7)} including breakfast.</WeeklyPrice>}
+      { surfcamp && <Price>{ calculatePriceWithSurfcamp(price, priceSurfcampWeekend, 2)  } surf package weekend (3 days of surfing and 2 nights of accomondation.).</Price>}
+      { surfcamp && <Price>{ calculatePriceWithSurfcamp(price, priceSurfcampWeek, 7) } surf package week (6 days) days of surfing and 7 nights of accomondation.</Price>}
     </TextImageConatiner>
   );
 }
 
-function ThreeImages({ textImages, rooms }: Props) {
-  const imagesWithText = textImages.map(textImage => <TextImageBlock {...textImage} rooms={ rooms }/>);
+function ThreeImages({ textImages, rooms, surfcamp }: Props) {
+  const imagesWithText = textImages.map(textImage => <TextImageBlock {...textImage} rooms={ rooms } surfcamp={ surfcamp }/>);
   return(
     <Wrapper>
       { imagesWithText }

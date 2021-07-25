@@ -17,20 +17,26 @@ export const roomsRow1: TextImages[] = [
   {
     ingress: 'Room on first floor with one double bed, a bunker bed and private bathroom.',
     capacity: '4 people',
-    price: 45,
+    price: 220,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   },
   {
     ingress: 'Room on first floor one regular bed, a bunker bed and private bathroom.',
     capacity: '3 people',
-    price: 39,
+    price: 200,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   },
   {
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
-    price: 12,
+    price: 100,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   }
 ];
 
@@ -38,20 +44,26 @@ export const roomsRow2: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 35,
+    price: 170,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   },
   {
     ingress: 'Room on second floor with one double bed with shared bathroom.',
     capacity: '2 people',
-    price: 15,
+    price: 120,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   },
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 35,
+    price: 170,
     image: Room1,
+    priceSurfcampWeekend: 270,
+    priceSurfcampWeek: 480,
   }
 ];
 

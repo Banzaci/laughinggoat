@@ -9,6 +9,7 @@ export const Wrapper = styled.div<{ color?: boolean; }>`
   background-color: ${props => props.color ? 'white': 'transparent'};
   width: 100%;
   height: 100%;
+  margin-bottom: 88px;
 `;
 
 export const Content = styled.article`
