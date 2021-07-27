@@ -17,7 +17,7 @@ export const FontWrapper = styled.main`
   margin: 44px 0 12px 0;
 `;
 
-const reviewText2 = 'Our surf package includes <strong>1hr with a surf instructor + 1hr of free surfing a day</strong>. You can choose between the weekend package, or the weekly package. Breakfast is included.';
+const reviewText2 = 'Our surf package includes <strong>1hr with a surf instructor + 1hr of free surfing a day</strong>. You can choose between the weekend package, or the weekly package. Breakfast can be added for an extra GH₵30.';
 
 function Rooms() {
   return (

@@ -3,7 +3,8 @@ import { Wrapper, Content} from './components/Components';
 import Hero from './components/Hero';
 import Text from './components/Text';
 import TextImage from './components/TextImage';
-import Room1 from '../imgs/room1.JPG';
+import House from '../imgs/house.jpg';
+import Beach from '../imgs/beach.jpg';
 import Yard from '../imgs/yeard.jpg';
 import { roomIngress } from './Rooms';
 import { restaurantIngress } from './Restaurang';
@@ -21,9 +22,9 @@ function Home() {
        <Wrapper>
           <Content>
             <Text top text={ reviewText } href={ reviewLink } italic/>
-            <TextImage buttonText="Visit our rooms" text={ roomIngress } image={ Room1 } href="rooms" icon={ faBed } />
+            <TextImage buttonText="Visit our rooms" text={ roomIngress } image={ House } href="rooms" icon={ faBed } />
             <TextImage buttonText="Have a look at the menu"  text={ restaurantIngress } image={ Yard } right href="restaurant" icon={ faUtensils }/>
-            <TextImage  buttonText="Read more" text={ beachIngress } image={ Room1 } href="busua-beach" icon={ faUmbrellaBeach } />
+            <TextImage  buttonText="Read more" text={ beachIngress } image={ Beach } href="busua-beach" icon={ faUmbrellaBeach } />
           </Content>
        </Wrapper>
     </>

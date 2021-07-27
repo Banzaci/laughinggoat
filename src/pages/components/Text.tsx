@@ -19,12 +19,12 @@ const Paragraph = styled.p<{ italic?: boolean; left?: boolean; white?: boolean;}
   line-height: 28px;
   text-align: ${props => props.left ? 'italic' : 'center' };
   font-style: ${props => props.italic ? 'italic' : 'normal' };
-  font-size: 16px;
+  font-size: 14px;
 
   h2 {
     padding: 0;
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 

@@ -46,14 +46,14 @@ const Price = styled.span`
   display: flex;
   margin: 4px 0;
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 const WeeklyPrice = styled.span`
   display: flex;
   margin: 4px 0;
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 export interface TextImages {
@@ -85,10 +85,10 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, pric
       </ImageWrapper>
       <Text>Max capacity: { capacity }.</Text>
       <Ingress>{ ingress }</Ingress>
-      { rooms && <Price>Price per night: { price } including breakfast.</Price>}
-      { rooms && <WeeklyPrice>Price for 7 nights: { calculatePriceWithDiscount(price, 7)} including breakfast.</WeeklyPrice>}
-      { surfcamp && <Price>{ calculatePriceWithSurfcamp(price, priceSurfcampWeekend, 2)  } surf package weekend (3 days of surfing and 2 nights of accomondation.).</Price>}
-      { surfcamp && <Price>{ calculatePriceWithSurfcamp(price, priceSurfcampWeek, 7) } surf package week (6 days) days of surfing and 7 nights of accomondation.</Price>}
+      { rooms && <Price>1 night GH₵{ price }</Price>}
+      { rooms && <WeeklyPrice>7 nights GH₵{ calculatePriceWithDiscount(price, 7)}</WeeklyPrice>}
+      { surfcamp && <Price>GH₵{ calculatePriceWithSurfcamp(price, priceSurfcampWeekend, 2)  } surf package weekend (3 days of surfing and 2 nights of accomondation.).</Price>}
+      { surfcamp && <Price>GH₵{ calculatePriceWithSurfcamp(price, priceSurfcampWeek, 7) } surf package week (6 days) days of surfing and 7 nights of accomondation.</Price>}
     </TextImageConatiner>
   );
 }
