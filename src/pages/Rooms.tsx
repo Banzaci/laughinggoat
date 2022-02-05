@@ -8,7 +8,7 @@ import ThreeImages, { TextImages } from './components/ThreeImages';
 import Room1 from '../imgs/room1.jpg';
 import Room2 from '../imgs/room2.jpg';
 import Room3 from '../imgs/room3.jpg';
-import Room4 from '../imgs/room6.JPG';
+import Room4 from '../imgs/room6.jpg';
 import Room5 from '../imgs/room5.jpg';
 import Room6 from '../imgs/room4b.jpg';
 import Yard from '../imgs/yeard.jpg';
