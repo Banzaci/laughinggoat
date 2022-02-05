@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import ThreeImages, { TextImages } from './components/ThreeImages';
 import Room1 from '../imgs/room1.jpg';
 import Room2 from '../imgs/room2.jpg';
+import Room3 from '../imgs/room3.jpg';
 import Room4 from '../imgs/room6.JPG';
 import Room5 from '../imgs/room5.jpg';
 import Room6 from '../imgs/room4b.jpg';
@@ -38,7 +39,7 @@ export const roomsRow1: TextImages[] = [
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
     price: 100,
-    image: Room1,
+    image: Room3,
     priceSurfcampWeekend: 270,
     priceSurfcampWeek: 480,
   }

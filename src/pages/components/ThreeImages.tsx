@@ -21,12 +21,15 @@ const TextImageConatiner = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   margin-bottom: 8px;
+  overflow: hidden;
+  
 `;
 
 const Image = styled.img`
-  display: flex;
   height: auto;
   overflow:hidden;
+  width: 100%;
+  height: 100%;
 `;
 
 const Ingress = styled.p`

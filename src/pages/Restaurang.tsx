@@ -23,13 +23,37 @@ export const restaurantIngress = [
 
 const breakfast = [
   {
-    item: 'Pancakes',
+    item: 'Full surfers breakfast (Toast, pancace)',
+    price: 35,
+  },
+  {
+    item: 'Pancakes with banana & syrup',
     price: 20,
-  }
+  },
+  {
+    item: 'Avocado toast with hummus',
+    price: 25,
+  },
+];
+
+const lunch = [
+  {
+    item: 'Full surfers breakfast (Toast, pancace)',
+    price: 35,
+  },
+  {
+    item: 'Pancakes with banana & syrup',
+    price: 20,
+  },
+  {
+    item: 'Avocado toast with hummus',
+    price: 25,
+  },
 ]
 
 function Restaurang() {
   const breakfastItems = breakfast.map(MenuItem);
+  const lunchItems = lunch.map(MenuItem);
   return (
     <Main>
       <Hero src={ Yard }/>
@@ -38,6 +62,7 @@ function Restaurang() {
           <FontWrapper><FontAwesomeIcon icon={ faUtensils } size="3x" color="#666" /></FontWrapper>
           <Text smallMargin left text={ restaurantIngress[0] }/>
           <Food>{ breakfastItems }</Food>
+          <Food>{ lunchItems }</Food>
         </Content>
       </Wrapper>
     </Main>
