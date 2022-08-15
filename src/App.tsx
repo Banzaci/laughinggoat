@@ -5,13 +5,12 @@ import { theme } from './theme';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Home from './pages/Home';
-import Rooms from './pages/Rooms';
-import Restaurang from './pages/Restaurang';
-import BusuaBeach from './pages/BusuaBeach';
-import Contact from './pages/Contact';
 
-import SurfCamp from './pages/SurfCamp';
+const Home = React.lazy(() =>  import('./pages/Home'));
+const Rooms = React.lazy(() =>  import('./pages/Rooms'));
+const BusuaBeach = React.lazy(() =>  import('./pages/BusuaBeach'));
+const Contact = React.lazy(() =>  import('./pages/Contact'));
+const Restaurang = React.lazy(() =>  import('./pages/Restaurang'));
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,6 +23,12 @@ const Main = styled.main`
   width: 100%;
 `;
 
+const Loader = styled.div`
+  display: flex;
+  align-items:center ;
+  justify-content:center ;
+`;
+
 function App() {
   return (
     <ThemeProvider theme={ theme }>
@@ -32,12 +37,13 @@ function App() {
         <Router>
           <Wrapper>
             <Main>
-              <Route exact path="/" component={ Home } />
-              <Route path="/rooms" component={ Rooms } />
-              <Route path="/busua-beach" component={ BusuaBeach } />
-              <Route path="/restaurant" component={ Restaurang } />
-              <Route path="/contact" component={ Contact } />
-              <Route path="/surf-camp" component={ SurfCamp } />
+              <React.Suspense fallback={<Loader>Loading...</Loader>}>
+                <Route exact path="/" component={ Home } />
+                <Route path="/rooms" component={ Rooms } />
+                <Route path="/busua-beach" component={ BusuaBeach } />
+                <Route path="/restaurant" component={ Restaurang } />
+                <Route path="/contact" component={ Contact } />
+              </React.Suspense>
             </Main>
             <Header/>
             <Footer/>
@@ -48,12 +54,3 @@ function App() {
   );
 }
 export default App;
-
-/*
-<ThemeProvider theme={ theme }>
-      <>
-        <GlobalStyles />
-        <Router />
-      </>
-    </ThemeProvider>
-    */

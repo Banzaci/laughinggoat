@@ -66,7 +66,7 @@ const ImageWrapper = styled.div`
   margin-bottom: 24px;
   @media only screen and (min-width : 920px) {
     width: 50%;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     max-height: 400px;
   }
 `;

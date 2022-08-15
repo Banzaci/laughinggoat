@@ -72,11 +72,11 @@ const Item = styled.li`
   a {
     color: #FFF;
     text-decoration: none;
-    padding: 12px 24px 8px;
+    padding: 12px 24px;
     transition: all 0.2s;
     font-size: 16px;
     &:hover {
-      background-color: rgba(255, 180, 0, .9);
+      background-color: rgba(255, 180, 0, .8);
     }
   }
 `;
@@ -117,12 +117,6 @@ function Router() {
                 <Link to="/rooms" onClick={ onToggleMenu }>ROOMS</Link>
               </ItemMobile>
               <ItemMobile>
-                <Link to="/surf-camp" onClick={ onToggleMenu }>SURF CAMP</Link>
-              </ItemMobile>
-              <ItemMobile>
-                <Link to="/restaurant" onClick={ onToggleMenu }>RESTAURANT</Link>
-              </ItemMobile>
-              <ItemMobile>
                 <Link to="/busua-beach" onClick={ onToggleMenu }>BUSUA BEACH</Link>
               </ItemMobile>
               <ItemMobile>
@@ -150,12 +144,6 @@ function Router() {
             </Item>
             <Item>
               <Link to="/rooms">ROOMS</Link>
-            </Item>
-            <Item>
-                <Link to="/surf-camp">SURF CAMP</Link>
-            </Item>
-            <Item>
-              <Link to="/restaurant">RESTAURANT</Link>
             </Item>
             <Item>
               <Link to="/busua-beach">BUSUA BEACH</Link>

@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 import ThreeImages from './components/ThreeImages';
 import Yard from '../imgs/yeard.jpg';
 import styled from 'styled-components';
-import { roomsRow1, roomsRow2 } from './Rooms';
+import { roomsRow2 } from './Rooms';
 
 export const FontWrapper = styled.main`
   width: 100%;
@@ -27,7 +27,7 @@ function Rooms() {
           <Content>
             <FontWrapper><FontAwesomeIcon icon={ faBed } size="3x" color="#666" /></FontWrapper>
             <Text smallMargin left text={ reviewText2 }/>
-            <ThreeImages textImages={ roomsRow1 } surfcamp />
+            {/* <ThreeImages textImages={ roomsRow1 } surfcamp /> */}
             <ThreeImages textImages={ roomsRow2 } surfcamp />
           </Content>
        </Wrapper>

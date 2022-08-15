@@ -33,9 +33,8 @@ const Img = styled.img<{ src: any; }>`
   opacity: .6;
 `;
 const Text = styled.p`
-  text-align: center; 
   color: white;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0;
   line-height: 24px;
   font-size: 18px;
