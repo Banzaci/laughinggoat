@@ -14,7 +14,7 @@ function Contact() {
         <Content>
           <FontWrapper><FontAwesomeIcon icon={ faMobileAlt } size="3x" color="#666" /></FontWrapper>
           <Text smallMargin text="Payments can be done by either banktransfer, cash at site or BTC." />
-          <Text smallMargin text="Feel free to send us an email or give us a call on <a href='tel:+233 54 175 5533'>+233 54 175 5533</a>." />
+          <Text smallMargin text="Feel free to send us an laughinggoatghana (@) gmail (.) com or give us a call on <a href='tel:+233 54 175 5533'>+233 54 175 5533</a>." />
         </Content>
       </Wrapper>
     </Main>

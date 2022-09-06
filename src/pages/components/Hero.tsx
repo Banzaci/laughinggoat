@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ButtonWhiteNoCorners } from './Button';
 
@@ -65,7 +66,8 @@ function Hero({ src, href, texts, buttonText, fullHeight }: Props) {
     <Wrapper fullHeight={ fullHeight }>
       <Img src={ source } />
       <ButtonWrapper>
-      { href && <ButtonWhiteNoCorners href={ href } large margin='12px 0 44px 0'>{ buttonText }</ButtonWhiteNoCorners> }
+      { href && <ButtonWhiteNoCorners large margin='12px 0 44px 0'>
+        <Link to={href}>{ buttonText }</Link></ButtonWhiteNoCorners> }
         { text }
         </ButtonWrapper>
     </Wrapper>
