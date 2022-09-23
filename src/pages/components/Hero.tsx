@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import { ButtonWhiteNoCorners } from './Button';
 
 const Wrapper = styled.div<{ fullHeight?: boolean; }>`
-  width: 100%;
   height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 20px)'};
   background-color: black;
+  width: 100%;
+  height: 320px;
   @media only screen and (min-width : 920px) {
     height: ${props => props.fullHeight ? '100vh' : 'calc(100vh - 480px)'}; 
   }
@@ -19,6 +20,8 @@ const ButtonWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   top: 100px;
+  width: 100%;
+  margin: 0 auto;
   @media only screen and (min-width : 920px) {
     top: 320px;
     left: 0;
@@ -35,11 +38,12 @@ const Img = styled.img<{ src: any; }>`
 `;
 const Text = styled.p`
   color: white;
-  max-width: 100%;
+  max-width: 80%;
   margin: 0;
   line-height: 24px;
   font-size: 18px;
   margin-top: 32px;
+  text-align: center;
   @media only screen and (min-width : 920px) {
     max-width: 550px; 
   }
@@ -66,10 +70,10 @@ function Hero({ src, href, texts, buttonText, fullHeight }: Props) {
     <Wrapper fullHeight={ fullHeight }>
       <Img src={ source } />
       <ButtonWrapper>
-      { href && <ButtonWhiteNoCorners large margin='12px 0 44px 0'>
+        { href && <ButtonWhiteNoCorners large margin='12px 0 44px 0'>
         <Link to={href}>{ buttonText }</Link></ButtonWhiteNoCorners> }
         { text }
-        </ButtonWrapper>
+      </ButtonWrapper>
     </Wrapper>
   )
 }

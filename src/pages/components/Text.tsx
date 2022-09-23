@@ -6,6 +6,7 @@ const Wrapper = styled.div<{ top?: boolean; smallMargin?: boolean;  left?: boole
   justify-content: ${props => props.left ? 'flex-start' : 'center' };
   align-items: center;
   width: 600px;
+  width: 80%;
 `;
 
 const Paragraph = styled.p<{ italic?: boolean; left?: boolean; white?: boolean;}>`
@@ -43,11 +44,11 @@ interface Props {
 
 function Text({ text, top, italic, href, smallMargin, left, white }: Props) {
   return(
-      <Wrapper top={ top } smallMargin={ smallMargin } left={ left }>
-        { href ? <Href href={ href } rel="noreferrer" target="_blank"><Paragraph white={ white } left={ left } italic={ italic }>
-          { text }
-        </Paragraph></Href> : <Paragraph white={ white } italic={ italic } left={ left } dangerouslySetInnerHTML={{__html: text}} />}
-      </Wrapper>
+    <Wrapper top={ top } smallMargin={ smallMargin } left={ left }>
+      { href ? <Href href={ href } rel="noreferrer" target="_blank"><Paragraph white={ white } left={ left } italic={ italic }>
+        { text }
+      </Paragraph></Href> : <Paragraph white={ white } italic={ italic } left={ left } dangerouslySetInnerHTML={{__html: text}} />}
+    </Wrapper>
   )
 }
 
