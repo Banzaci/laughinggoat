@@ -26,3 +26,21 @@ export const FontWrapper = styled.main`
   justify-content: center;
   margin: 44px 0 12px 0;
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const ImageWrapper = styled.div`
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  max-height: 300px;
+  margin-bottom: 24px;
+  @media only screen and (min-width : 920px) {
+    width: 50%;
+    max-height: 400px;
+  }
+`;

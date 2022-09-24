@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ButtonGrey } from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ImageWrapper, Image } from './Components';
 
 const Wrapper = styled.div<{ right?: boolean; top?: boolean; }>`
   display: flex;
@@ -52,29 +53,10 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const ImageWrapper = styled.div`
-  overflow: hidden;
-  display: flex;
-  flex: 1;
-  max-height: 300px;
-  margin-bottom: 24px;
-  @media only screen and (min-width : 920px) {
-    width: 50%;
-    /* border-radius: 8px; */
-    max-height: 400px;
-  }
-`;
-
 interface Props {
   right?: boolean;
   image: string;
-  buttonText: string;
+  buttonText?: string;
   text: string[];
   href?: string;
   top?: boolean;
