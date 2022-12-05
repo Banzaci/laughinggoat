@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { ButtonGrey } from './Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

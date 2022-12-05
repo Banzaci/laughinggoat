@@ -1,4 +1,3 @@
-import React from 'react';
 import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Main , Wrapper, Content, FontWrapper } from './components/Components';

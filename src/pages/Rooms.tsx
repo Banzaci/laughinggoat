@@ -1,4 +1,3 @@
-import React from 'react';
 import { faBed } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Main , Wrapper, Content, FontWrapper } from './components/Components';
@@ -85,6 +84,7 @@ function Rooms() {
             <FontWrapper><FontAwesomeIcon icon={ faBed } size="3x" color="#666" /></FontWrapper>
             <Text smallMargin left text={ roomIngress[0] }/>
             <Text smallMargin left text={ roomIngress[1] }/>
+            <Text smallMargin left text={ roomIngress[2] }/>
             {/* <ThreeImages textImages={ roomsRow1 } rooms /> */}
             <ThreeImages textImages={ roomsRow2 } rooms />
           </Content>

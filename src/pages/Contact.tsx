@@ -1,4 +1,3 @@
-import React from 'react';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ImageWrapper, Image, Main, Wrapper, Content, FontWrapper } from './components/Components';
