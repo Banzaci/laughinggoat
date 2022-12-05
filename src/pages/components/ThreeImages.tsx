@@ -64,6 +64,8 @@ export interface TextImages {
   ingress: string,
   capacity: string,
   price: number,
+  priceHighSeason?: number,
+  highSeasonDates?: string,
   priceSurfcampWeek: number,
   priceSurfcampWeekend: number,
   rooms?: boolean;
