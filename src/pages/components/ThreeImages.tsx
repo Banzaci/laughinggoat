@@ -64,8 +64,6 @@ export interface TextImages {
   capacity: string,
   price: number,
   priceHighSeason: number,
-  priceSurfcampWeek: number,
-  priceSurfcampWeekend: number,
   rooms?: boolean;
   surfcamp?: boolean;
 }
@@ -78,9 +76,7 @@ interface Props {
 
 const calculatePriceWithDiscount = (price: number, no:number) => Math.round(price * .82) * no;
 
-const calculatePriceWithSurfcamp = (price: number, priceSurfcampWeek: number, no:number) => calculatePriceWithDiscount(price, no) + priceSurfcampWeek;
-
-const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, priceSurfcampWeek, priceSurfcampWeekend, priceHighSeason }: TextImages, index:number) => {
+const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, priceHighSeason }: TextImages, index:number) => {
   return (
     <TextImageConatiner key={ index }>
       <ImageWrapper>
@@ -93,8 +89,6 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, pric
       <Text>High season.</Text>
       { rooms && <Price>1 night GH₵{ priceHighSeason }</Price>}
       { rooms && <WeeklyPrice>7 nights GH₵{ calculatePriceWithDiscount(priceHighSeason, 7)}</WeeklyPrice>}
-      { surfcamp && <Price>GH₵{ calculatePriceWithSurfcamp(price, priceSurfcampWeekend, 2)  } surf package weekend (3 days of surfing and 2 nights of accomondation.).</Price>}
-      { surfcamp && <Price>GH₵{ calculatePriceWithSurfcamp(price, priceSurfcampWeek, 7) } surf package week (6 days) days of surfing and 7 nights of accomondation.</Price>}
     </TextImageConatiner>
   );
 }

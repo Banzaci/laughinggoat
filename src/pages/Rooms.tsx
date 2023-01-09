@@ -20,61 +20,83 @@ export const roomIngress = [
 
 export const roomsRow1: TextImages[] = [
   {
-    ingress: 'Room on first floor with one double bed, a bunker bed and private bathroom.',
+    ingress: 'Room on second floor with one double bed and private bathroom.',
     capacity: '2 people',
-    price: 170,
-    image: Room1,
-    priceSurfcampWeekend: 270,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 270,
+    price: 185, // 215
+    image: Room2,
+    priceHighSeason: 275, // 315
   },
   {
-    ingress: 'Room on first floor one regular bed, a bunker bed and private bathroom.',
-    capacity: '2 people',
-    price: 170,
-    image: Room2,
-    priceSurfcampWeekend: 270,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 270,
+    ingress: 'Room on first floor with one double bed, a bunker bed and private bathroom.',
+    capacity: '3 people',
+    price: 210, // 240
+    image: Room1,
+    priceHighSeason: 315, // 360
   },
   {
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
-    price: 100,
+    price: 100, // 115
     image: Room3,
-    priceSurfcampWeekend: 270,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 140,
+    priceHighSeason: 150, // 170
   }
 ];
+
+// Bookings High Season
+// R.1 = 315
+// R.2 = 360
+// R.3 = 170
+// R.4 = 315
+// R.5 = 205
+// R.6 = 315
+
+// Bookings Low Season
+// R.1 = 215
+// R.2 = 240
+// R.3 = 115
+// R.4 = 215
+// R.5 = 138
+// R.6 = 215
+
+// Laughing Goat High Season
+// R.1 = 275
+// R.2 = 315
+// R.3 = 150
+// R.4 = 275
+// R.5 = 180
+// R.6 = 275
+
+// Laughing Goat Low Season
+// R.1 = 185
+// R.2 = 210
+// R.3 = 100
+// R.4 = 185
+// R.5 = 120
+// R.6 = 185
+
+
 
 export const roomsRow2: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 170,
+    price: 185, // 215
     image: Room4,
-    priceSurfcampWeekend: 270,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 270,
+    priceHighSeason: 275, // 315
   },
   {
     ingress: 'Room on second floor with one double bed with shared bathroom.',
     capacity: '2 people',
-    price: 140,
+    price: 120, // 138
     image: Room5,
-    priceSurfcampWeekend: 210,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 270,
+    priceHighSeason: 180, // 205
   },
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 170,
+    price: 185, // 215
     image: Room6,
-    priceSurfcampWeekend: 270,
-    priceSurfcampWeek: 480,
-    priceHighSeason: 270,
+    priceHighSeason: 275, // 315
   }
 ];
 
