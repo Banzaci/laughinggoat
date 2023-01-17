@@ -44,19 +44,46 @@ export const roomsRow1: TextImages[] = [
 
 // Bookings High Season
 // R.1 = 315
-// R.2 = 360
-// R.3 = 170
+// R.2 = 380
+// R.3 = 165
 // R.4 = 315
 // R.5 = 205
 // R.6 = 315
 
 // Bookings Low Season
 // R.1 = 215
-// R.2 = 240
-// R.3 = 115
+// R.2 = 255
+// R.3 = 165
 // R.4 = 215
 // R.5 = 138
 // R.6 = 215
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Laughing Goat High Season
 // R.1 = 275

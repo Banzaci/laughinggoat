@@ -5,9 +5,9 @@ import { theme } from './theme';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import Rooms from './pages/Rooms';
 
 const Home = React.lazy(() =>  import('./pages/Home'));
-const Rooms = React.lazy(() =>  import('./pages/Rooms'));
 const BusuaBeach = React.lazy(() =>  import('./pages/BusuaBeach'));
 const Contact = React.lazy(() =>  import('./pages/Contact'));
 const Restaurang = React.lazy(() =>  import('./pages/Restaurang'));
