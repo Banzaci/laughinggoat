@@ -5,9 +5,9 @@ import { theme } from './theme';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Rooms from './pages/Rooms';
 
 const Home = React.lazy(() =>  import('./pages/Home'));
+const Rooms = React.lazy(() =>  import('./pages/Rooms'));
 const BusuaBeach = React.lazy(() =>  import('./pages/BusuaBeach'));
 const Contact = React.lazy(() =>  import('./pages/Contact'));
 const Restaurang = React.lazy(() =>  import('./pages/Restaurang'));
@@ -34,23 +34,25 @@ function App() {
     <ThemeProvider theme={ theme }>
       <>
         <GlobalStyles />
-        <Router>
+        
           <Wrapper>
+              <Router>
             <Main>
               <React.Suspense fallback={<Loader>Loading...</Loader>}>
-              <Switch>
-                <Route exact path="/" component={ Home } />
-                <Route path="/rooms" component={ Rooms } />
-                <Route path="/busua-beach" component={ BusuaBeach } />
-                <Route path="/restaurant" component={ Restaurang } />
-                <Route path="/contact" component={ Contact } />
-                </Switch>
-              </React.Suspense>
+                <Switch>
+                  <Route exact path="/" component={ Home } />
+                  <Route path="/rooms" component={ Rooms } />
+                  <Route path="/busua-beach" component={ BusuaBeach } />
+                  <Route path="/restaurant" component={ Restaurang } />
+                  <Route path="/contact" component={ Contact } />
+                  </Switch>
+                </React.Suspense>
             </Main>
             <Header/>
             <Footer/>
+                </Router>
           </Wrapper>
-        </Router>
+        
       </>
     </ThemeProvider>
   );
