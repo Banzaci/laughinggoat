@@ -13,7 +13,7 @@ import { faBed, faUtensils, faUmbrellaBeach } from '@fortawesome/free-solid-svg-
 
 
 const text1 = [
-  'Chilled big garden with a bar, kitchen and only three minutes walk to the beach.',
+  'Chilled big garden with a bar, kitchen and only three minutes walk to the beach',
   'Warm water all year around with great waves for both beginners and advanced.'
 ];
 const reviewText = '"This hotel is a hidden gem! It made my travel experience that much better. After traveling such a long distance this was the perfect place to stay. I felt safe, comfortable and I had so much fun..." - Read more reviews from Tripadvisor';
