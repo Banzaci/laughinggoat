@@ -14,7 +14,7 @@ import Yard from '../imgs/yeard.jpg';
 
 export const roomIngress = [
   'Our rooms are clean, bright and safe, and you can choose between single rooms with shared batroom or double bedrooms with a private batroom.',
-  'The prices are per room, and excluding breakfast. Breakfast is additional GH₵30.',
+  'The prices are per room, and excluding breakfast. Breakfast is additional GH₵55.',
   'High season is 22nd of December to 12th of January, 1st of March to 5th of April',
 ];
 

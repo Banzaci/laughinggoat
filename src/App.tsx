@@ -41,8 +41,8 @@ function App() {
               <React.Suspense fallback={<Loader>Loading...</Loader>}>
                 <Switch>
                   <Route exact path="/" component={ Home } />
-                  <Route path="/rooms" component={ Rooms } />
-                  <Route path="/busua-beach" component={ BusuaBeach } />
+                  <Route exact path="/rooms" component={ Rooms } />
+                  <Route exact path="/busua-beach" component={ BusuaBeach } />
                   <Route path="/restaurant" component={ Restaurang } />
                   <Route path="/contact" component={ Contact } />
                   </Switch>
