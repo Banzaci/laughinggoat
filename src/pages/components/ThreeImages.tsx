@@ -74,7 +74,7 @@ interface Props {
   surfcamp?: boolean;
 }
 
-const calculatePriceWithDiscount = (price: number, no:number) => Math.round(price * .82) * no;
+const calculatePriceWithDiscount = (price: number, no:number) => Math.round(price * .85) * no;
 
 const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, priceHighSeason }: TextImages, index:number) => {
   return (

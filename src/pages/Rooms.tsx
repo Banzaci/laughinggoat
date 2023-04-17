@@ -36,29 +36,29 @@ export const roomsRow1: TextImages[] = [
   {
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
-    price: 115,
+    price: 120,
     image: Room3,
-    priceHighSeason: 145
+    priceHighSeason: 150
   }
 ];
 
 // Bookings High Season
-// R.1 = 260
-// R.2 = 280
-// R.3 = 145
-// R.4 = 260
-// R.5 = 200
-// R.6 = 260
-// R.7 = 360
+// R.1 = 260 $26
+// R.2 = 280 $28
+// R.3 = 150 $15
+// R.4 = 260 $26
+// R.5 = 150 $15
+// R.6 = 260 $26
+// R.7 = 360 $46
 
 // Bookings Low Season
-// R.1 = 200
-// R.2 = 220
-// R.3 = 115
-// R.4 = 200
-// R.5 = 150
-// R.6 = 200
-// R.7 = 300
+// R.1 = 200 $20
+// R.2 = 220 $22
+// R.3 = 120 $12
+// R.4 = 200 $20
+// R.5 = 120 $15
+// R.6 = 200 $20
+// R.7 = 300 $30
 
 
 export const roomsRow2: TextImages[] = [
@@ -72,7 +72,7 @@ export const roomsRow2: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed with shared bathroom.',
     capacity: '2 people',
-    price: 150,
+    price: 120,
     image: Room5,
     priceHighSeason: 200
   },
