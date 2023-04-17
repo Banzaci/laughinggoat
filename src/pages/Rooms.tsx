@@ -22,108 +22,66 @@ export const roomsRow1: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom.',
     capacity: '2 people',
-    price: 185, // 215
+    price: 200,
     image: Room2,
-    priceHighSeason: 275, // 315
+    priceHighSeason: 260
   },
   {
-    ingress: 'Room on first floor with one double bed, a bunker bed and private bathroom.',
+    ingress: 'Room with one double bed, a bunker bed and private bathroom.',
     capacity: '3 people',
-    price: 210, // 240
+    price: 220,
     image: Room1,
-    priceHighSeason: 315, // 360
+    priceHighSeason: 280
   },
   {
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
-    price: 100, // 115
+    price: 115,
     image: Room3,
-    priceHighSeason: 150, // 170
+    priceHighSeason: 145
   }
 ];
 
 // Bookings High Season
-// R.1 = 315
-// R.2 = 380
-// R.3 = 165
-// R.4 = 315
-// R.5 = 205
-// R.6 = 315
+// R.1 = 260
+// R.2 = 280
+// R.3 = 145
+// R.4 = 260
+// R.5 = 200
+// R.6 = 260
+// R.7 = 360
 
 // Bookings Low Season
-// R.1 = 215
-// R.2 = 255
-// R.3 = 165
-// R.4 = 215
-// R.5 = 138
-// R.6 = 215
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Laughing Goat High Season
-// R.1 = 275
-// R.2 = 315
-// R.3 = 150
-// R.4 = 275
-// R.5 = 180
-// R.6 = 275
-
-// Laughing Goat Low Season
-// R.1 = 185
-// R.2 = 210
-// R.3 = 100
-// R.4 = 185
-// R.5 = 120
-// R.6 = 185
-
+// R.1 = 200
+// R.2 = 220
+// R.3 = 115
+// R.4 = 200
+// R.5 = 150
+// R.6 = 200
+// R.7 = 300
 
 
 export const roomsRow2: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 185, // 215
+    price: 200,
     image: Room4,
-    priceHighSeason: 275, // 315
+    priceHighSeason: 260
   },
   {
     ingress: 'Room on second floor with one double bed with shared bathroom.',
     capacity: '2 people',
-    price: 120, // 138
+    price: 150,
     image: Room5,
-    priceHighSeason: 180, // 205
+    priceHighSeason: 200
   },
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 185, // 215
+    price: 200,
     image: Room6,
-    priceHighSeason: 275, // 315
+    priceHighSeason: 260
   }
 ];
 
