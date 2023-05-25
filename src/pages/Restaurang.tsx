@@ -61,7 +61,7 @@ function Restaurang() {
           <FontWrapper>
             <FontAwesomeIcon icon={ faUtensils } size="3x" color="#666" />
           </FontWrapper>
-          Will soon be updated
+          <Food>Will soon be updated but we serv vegan food only.</Food>
           {/* <Text smallMargin left text={ restaurantIngress[0] }/>
           <Food>{ breakfastItems }</Food>
           <Food>{ lunchItems }</Food> */}
