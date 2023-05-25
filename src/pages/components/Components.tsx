@@ -44,3 +44,16 @@ export const ImageWrapper = styled.div`
     max-height: 400px;
   }
 `;
+export const ImageWrapperLarge = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+  img {
+    max-width: 600px;
+  }
+  @media only screen and (min-width : 920px) {
+    height: 50%;
+  }
+`;

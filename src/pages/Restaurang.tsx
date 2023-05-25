@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 import Yard from '../imgs/yeard.jpg';
 import styled from 'styled-components';
 import Menu from '../imgs/menu.jpg';
-import TextImage from './components/TextImage';
+import { ImageWrapperLarge, Image } from './components/Components';
 
 export const Food = styled.div`
   width: 100%;
@@ -65,8 +65,8 @@ function Restaurang() {
           <FontWrapper>
             <FontAwesomeIcon icon={ faUtensils } size="3x" color="#666" />
           </FontWrapper>
-          <TextImage text={ beachIngress } image={ Menu } />
-          <Food>Will soon be updated but we serv vegan food only.</Food>
+          <Food>{ beachIngress[0] }</Food>
+          <ImageWrapperLarge><Image src={Menu} /></ImageWrapperLarge>
           {/* <Text smallMargin left text={ restaurantIngress[0] }/>
           <Food>{ breakfastItems }</Food>
           <Food>{ lunchItems }</Food> */}
