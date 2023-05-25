@@ -6,6 +6,8 @@ import Hero from './components/Hero';
 // import MenuItem from './components/MenuItem';
 import Yard from '../imgs/yeard.jpg';
 import styled from 'styled-components';
+import Menu from '../imgs/menu.jpg';
+import TextImage from './components/TextImage';
 
 export const Food = styled.div`
   width: 100%;
@@ -49,7 +51,9 @@ export const restaurantIngress = [
 //     price: 25,
 //   },
 // ]
-
+export const beachIngress = [
+  'At Laughing Goat we offer an healthy tasy vegan food in',
+];
 function Restaurang() {
   // const breakfastItems = breakfast.map(MenuItem);
   // const lunchItems = lunch.map(MenuItem);
@@ -61,6 +65,7 @@ function Restaurang() {
           <FontWrapper>
             <FontAwesomeIcon icon={ faUtensils } size="3x" color="#666" />
           </FontWrapper>
+          <TextImage text={ beachIngress } image={ Menu } />
           <Food>Will soon be updated but we serv vegan food only.</Food>
           {/* <Text smallMargin left text={ restaurantIngress[0] }/>
           <Food>{ breakfastItems }</Food>
