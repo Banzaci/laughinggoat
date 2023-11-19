@@ -1,4 +1,5 @@
 import { faBed } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Main , Wrapper, Content, FontWrapper } from './components/Components';
 import Text from './components/Text';
@@ -11,6 +12,15 @@ import Room4 from '../imgs/room6.jpg';
 import Room5 from '../imgs/room5.jpg';
 import Room6 from '../imgs/room4b.jpg';
 import Yard from '../imgs/yeard.jpg';
+
+const OBS = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  text-align:center;
+  margin-top: 48px;
+  color: rgba(255, 180, 0, .8);
+`;
 
 export const roomIngress = [
   'Our rooms are clean, bright and safe, and you can choose between single rooms with shared batroom or double bedrooms with a private batroom.',
@@ -91,6 +101,9 @@ function Rooms() {
        <Hero src={ Yard }/>
        <Wrapper>
           <Content>
+            <Wrapper>
+              <OBS>Please observe. New pricese will come for 2024.</OBS>
+            </Wrapper>
             <FontWrapper><FontAwesomeIcon icon={ faBed } size="3x" color="#666" /></FontWrapper>
             <Text smallMargin left text={ roomIngress[0] }/>
             <Text smallMargin left text={ roomIngress[1] }/>

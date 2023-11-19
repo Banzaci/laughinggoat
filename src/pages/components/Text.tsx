@@ -35,6 +35,7 @@ const Href = styled.a<{ top?: boolean; }>`
 interface Props {
   text: string;
   href?: string;
+  style?: string;
   top?: boolean;
   smallMargin?: boolean;
   italic?: boolean;
