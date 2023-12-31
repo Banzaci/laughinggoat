@@ -32,66 +32,47 @@ export const roomsRow1: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom.',
     capacity: '2 people',
-    price: 200,
+    price: 250,
     image: Room2,
-    priceHighSeason: 260
+    priceHighSeason: 350
   },
   {
     ingress: 'Room with one double bed, a bunker bed and private bathroom.',
     capacity: '3 people',
-    price: 220,
+    price: 350,
     image: Room1,
-    priceHighSeason: 280
+    priceHighSeason: 450
   },
   {
     ingress: 'Room on first floor with one regular bed with shared bathroom.',
     capacity: '1 person',
-    price: 120,
+    price: 200,
     image: Room3,
-    priceHighSeason: 150
+    priceHighSeason: 300
   }
 ];
-
-// Bookings High Season
-// R.1 = 260 $26
-// R.2 = 280 $28
-// R.3 = 150 $15
-// R.4 = 260 $26
-// R.5 = 150 $15
-// R.6 = 260 $26
-// R.7 = 360 $46
-
-// Bookings Low Season
-// R.1 = 200 $20
-// R.2 = 220 $22
-// R.3 = 120 $12
-// R.4 = 200 $20
-// R.5 = 120 $15
-// R.6 = 200 $20
-// R.7 = 300 $30
-
 
 export const roomsRow2: TextImages[] = [
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 200,
+    price: 250,
     image: Room4,
-    priceHighSeason: 260
+    priceHighSeason: 350
   },
   {
     ingress: 'Room on second floor with one double bed with shared bathroom.',
     capacity: '2 people',
-    price: 120,
+    price: 200,
     image: Room5,
-    priceHighSeason: 200
+    priceHighSeason: 250
   },
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
-    price: 200,
+    price: 250,
     image: Room6,
-    priceHighSeason: 260
+    priceHighSeason: 350
   }
 ];
 
