@@ -85,10 +85,8 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, pric
       <Text>Max capacity: { capacity }.</Text>
       <Ingress>{ ingress }</Ingress>
       { rooms && <Price>1 night GH₵{ price }</Price>}
-      { rooms && <WeeklyPrice>7 nights GH₵{ calculatePriceWithDiscount(price, 7)}</WeeklyPrice>}
       <Text>High season.</Text>
       { rooms && <Price>1 night GH₵{ priceHighSeason }</Price>}
-      { rooms && <WeeklyPrice>7 nights GH₵{ calculatePriceWithDiscount(priceHighSeason, 7)}</WeeklyPrice>}
     </TextImageConatiner>
   );
 }
