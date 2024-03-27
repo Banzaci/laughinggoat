@@ -19,7 +19,7 @@ const Paragraph = styled.p<{ italic?: boolean; left?: boolean; white?: boolean;}
   line-height: 28px;
   text-align: ${props => props.left ? 'italic' : 'center' };
   font-style: ${props => props.italic ? 'italic' : 'normal' };
-  font-size: 14px;
+  font-size: 16px;
 
   h2 {
     padding: 0;

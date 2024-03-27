@@ -10,7 +10,7 @@ const Home = React.lazy(() =>  import('./pages/Home'));
 const Rooms = React.lazy(() =>  import('./pages/Rooms'));
 const BusuaBeach = React.lazy(() =>  import('./pages/BusuaBeach'));
 const Contact = React.lazy(() =>  import('./pages/Contact'));
-const Restaurang = React.lazy(() =>  import('./pages/Restaurang'));
+const Surfing = React.lazy(() =>  import('./pages/SurfCamp'));
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ function App() {
                   <Route exact path="/" component={ Home } />
                   <Route exact path="/rooms" component={ Rooms } />
                   <Route exact path="/busua-beach" component={ BusuaBeach } />
-                  <Route path="/restaurant" component={ Restaurang } />
+                  <Route path="/surfing" component={ Surfing } />
                   <Route path="/contact" component={ Contact } />
                   </Switch>
                 </React.Suspense>

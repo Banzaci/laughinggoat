@@ -24,7 +24,7 @@ export const FontWrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 12px 0;
+  margin: 22px 0 12px 0;
 `;
 
 export const Image = styled.img`

@@ -125,6 +125,9 @@ function Router() {
                 <Link to="/booking" onClick={ onToggleMenu }>BOOKING</Link>
               </ItemMobile>
               <ItemMobile>
+                <Link to="/surfing" onClick={ onToggleMenu }>SURFING</Link>
+              </ItemMobile>
+              <ItemMobile>
                 <Link to="/contact" onClick={ onToggleMenu }>CONTACT</Link>
               </ItemMobile>
             </WrapperMobileNavigation>
@@ -158,6 +161,9 @@ function Router() {
             </Item>
             <Item>
               <Link to="/booking">BOOKINGS</Link>
+            </Item>
+            <Item>
+              <Link to="/surfing">SURFING</Link>
             </Item>
             <Item>
               <Link to="/contact">CONTACT</Link>

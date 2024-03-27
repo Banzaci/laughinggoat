@@ -120,6 +120,9 @@ function Router() {
                 <Link to="/busua-beach" onClick={ onToggleMenu }>BUSUA BEACH</Link>
               </ItemMobile>
               <ItemMobile>
+                <Link to="/surfing" onClick={ onToggleMenu }>SURFING</Link>
+              </ItemMobile>
+              <ItemMobile>
                 <Link to="/contact" onClick={ onToggleMenu }>CONTACT</Link>
               </ItemMobile>
             </WrapperMobileNavigation>
@@ -147,6 +150,9 @@ function Router() {
             </Item>
             <Item>
               <Link to="/busua-beach">BUSUA BEACH</Link>
+            </Item>
+            <Item>
+              <Link to="/surfing">SURFING</Link>
             </Item>
             <Item>
               <Link to="/contact">CONTACT</Link>

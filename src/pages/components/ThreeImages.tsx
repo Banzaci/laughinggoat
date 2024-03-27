@@ -60,10 +60,10 @@ const WeeklyPrice = styled.span`
 
 export interface TextImages {
   image: string;
-  ingress: string,
-  capacity: string,
-  price: number,
-  priceHighSeason: number,
+  ingress?: string,
+  capacity?: string,
+  price?: number,
+  priceHighSeason?: number,
   rooms?: boolean;
   surfcamp?: boolean;
 }
@@ -82,10 +82,10 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, pric
       <ImageWrapper>
         <Image src={ image } />
       </ImageWrapper>
-      <Text>Max capacity: { capacity }.</Text>
-      <Ingress>{ ingress }</Ingress>
+      {capacity && <Text>Max capacity: { capacity }.</Text>}
+      {ingress && <Ingress>{ ingress }</Ingress>}
       { rooms && <Price>1 night GH₵{ price }</Price>}
-      <Text>High season.</Text>
+      { rooms && <Text>High season.</Text>}
       { rooms && <Price>1 night GH₵{ priceHighSeason }</Price>}
     </TextImageConatiner>
   );
