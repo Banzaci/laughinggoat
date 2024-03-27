@@ -51,13 +51,6 @@ const Price = styled.span`
   font-size: 14px;
 `;
 
-const WeeklyPrice = styled.span`
-  display: flex;
-  margin: 4px 0;
-  color: #666;
-  font-size: 14px;
-`;
-
 export interface TextImages {
   image: string;
   ingress?: string,
@@ -73,8 +66,6 @@ interface Props {
   rooms?: boolean;
   surfcamp?: boolean;
 }
-
-const calculatePriceWithDiscount = (price: number, no:number) => Math.round(price * .85) * no;
 
 const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, priceHighSeason }: TextImages, index:number) => {
   return (
