@@ -75,15 +75,15 @@ const TextImageBlock = ({ image, ingress, capacity, price, rooms, surfcamp, pric
       </ImageWrapper>
       {capacity && <Text>Max capacity: { capacity }.</Text>}
       {ingress && <Ingress>{ ingress }</Ingress>}
-      { rooms && <Price>1 night GH₵{ price }</Price>}
+      { rooms && <Price>1 night ${ price }</Price>}
       { rooms && <Text>High season.</Text>}
-      { rooms && <Price>1 night GH₵{ priceHighSeason }</Price>}
+      { rooms && <Price>1 night ${ priceHighSeason }</Price>}
     </TextImageConatiner>
   );
 }
 
 function ThreeImages({ textImages, rooms, surfcamp }: Props) {
-  const imagesWithText = textImages.map(textImage => <TextImageBlock {...textImage} rooms={ rooms } surfcamp={ surfcamp }/>);
+  const imagesWithText = textImages.map((textImage, index) => <TextImageBlock key={index} {...textImage} rooms={ rooms } surfcamp={ surfcamp }/>);
   return(
     <Wrapper>
       { imagesWithText }
