@@ -19,18 +19,18 @@ export const roomIngress = [
 
 export const roomsRow1: TextImages[] = [
   {
-    ingress: 'Room on second floor with one double bed and private bathroom.',
+    ingress: 'Room on first floor with one double bed and private bathroom.',
     capacity: '2 people',
     price: 24,
-    image: Room2,
-    priceHighSeason: 28
+    image: Room1,
+    priceHighSeason: 30
   },
   {
     ingress: 'Room with one double bed, a bunker bed and private bathroom.',
     capacity: '3 people',
-    price: 32,
-    image: Room1,
-    priceHighSeason: 36
+    price: 36,
+    image: Room2,
+    priceHighSeason: 45
   },
   {
     ingress: 'Room on first floor with one single bed with private bathroom.',
@@ -47,21 +47,21 @@ export const roomsRow2: TextImages[] = [
     capacity: '2 people',
     price: 24,
     image: Room4,
-    priceHighSeason: 28
+    priceHighSeason: 30
   },
   {
     ingress: 'Room on second floor with one double bed with outside private bathroom.',
     capacity: '2 people',
     price: 15,
     image: Room5,
-    priceHighSeason: 18
+    priceHighSeason: 20
   },
   {
     ingress: 'Room on second floor with one double bed and private bathroom',
     capacity: '2 people',
     price: 24,
     image: Room6,
-    priceHighSeason: 28
+    priceHighSeason: 30
   }
 ];
 
